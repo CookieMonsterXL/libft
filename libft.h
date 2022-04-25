@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/15 11:29:32 by tbouma            #+#    #+#             */
+/*   Updated: 2022/04/22 12:58:32 by tbouma           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <stdbool.h>
@@ -70,13 +81,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int,	char*));
 
-void	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
-void	ft_putendl_fd(char *s, int fd);
+int		ft_putendl_fd(char *s, int fd);
 
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(long long n, int fd);
 
 typedef struct s_list
 {
@@ -103,5 +114,11 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 int		ft_isspace(char c);
+
+char	*ft_xtoa(long n);
+
+int		ft_hexlen(long n);
+
+char	*ft_ull_base(unsigned long long ull, int base);
 
 #endif
