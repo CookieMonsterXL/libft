@@ -6,25 +6,26 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:25:29 by tbouma            #+#    #+#             */
-/*   Updated: 2022/05/27 13:08:22 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/05/27 14:55:54 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	atoi_h(long num_l, int minplus)
+static int	atoi_h(long long num_l, int minplus)
 {
 	num_l *= minplus;
-	if (num_l < INT_MIN)
+	if (num_l < INT_MIN || num_l > INT_MAX)
 		return (0);
 	return (num_l);
 }
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	long	num_l;
-	int		minplus;
+	int			i;
+	int			num;
+	long long	num_l;
+	int			minplus;
 
 	i = 0;
 	num_l = 0;
@@ -42,10 +43,9 @@ int	ft_atoi(const char *str)
 		num_l *= 10;
 		num_l += str[i] - 48;
 		i++;
-		if (num_l >= INT_MAX)
-			return (0);
 	}
-	return (atoi_h(num_l, minplus));
+	num = atoi_h(num_l, minplus);
+	return (num);
 }
 
 // int main(void)
