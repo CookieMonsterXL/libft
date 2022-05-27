@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:25:29 by tbouma            #+#    #+#             */
-/*   Updated: 2022/05/27 13:02:03 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/05/27 13:06:16 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static int	atoi_h(long num_l, int minplus)
 int	ft_atoi(const char *str)
 {
 	int		i;
-	int		num;
 	long	num_l;
 	int		minplus;
 
