@@ -6,7 +6,7 @@
 /*   By: tbouma <tbouma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:29:32 by tbouma            #+#    #+#             */
-/*   Updated: 2022/04/22 12:58:32 by tbouma           ###   ########.fr       */
+/*   Updated: 2022/05/27 12:59:17 by tbouma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include <limits.h>
 
 /*
 malloc wih zeroes as value.
